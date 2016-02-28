@@ -14,8 +14,8 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
-var allCategoriesUrl =
-  "http://davids-restaurant.herokuapp.com/categories.json";
+var allCategoriesUrl = "http://davids-restaurant.herokuapp.com/categories.json";
+//var allCategoriesUrl = "js/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
@@ -119,8 +119,8 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var html = categoryHtml;
-      var homeHtmlToInsertIntoMainPage = insertProperty(html, "randomCategoryShortName", chosenCategoryShortName.short_name);
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName",
+        "'" + chosenCategoryShortName.short_name + "'");
       console.log("homeHtmlToInsertIntoMainPage " + homeHtmlToInsertIntoMainPage);
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
